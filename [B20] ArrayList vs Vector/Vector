@@ -1,0 +1,22 @@
+import java.util.Vector;
+
+public class VectorCapacityDemo {
+    public static void main(String[] args) {
+        Vector<String> vector = new Vector<String>(10);
+        
+        System.out.println("Initial Capacity: " + vector.capacity());
+        
+        for (int i = 1; i <= 10; i++) {
+            vector.add("Data" + i);
+        }
+        
+        System.out.println("Size after 10 elements: " + vector.size());
+        System.out.println("Capacity before resize: " + vector.capacity());
+        
+        vector.add("Data11");
+        
+        System.out.println("\nAfter adding 11th element:");
+        System.out.println("New Size: " + vector.size());
+        System.out.println("New Capacity: " + vector.capacity());
+    }
+}
