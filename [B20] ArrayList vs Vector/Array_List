@@ -1,0 +1,24 @@
+import java.util.ArrayList;
+
+public class ArrayListCapacityDemo {
+    public static void main(String[] args) {
+        ArrayList<String> list = new ArrayList<String>(10); 
+        
+               int initialCapacity = 10; 
+        
+              for (int i = 1; i <= 10; i++) {
+            list.add("IT2300" + i);
+        }
+                System.out.println("I Capacity (Simulated): " + iCapacity);
+        System.out.println("Current Size: " + list.size()); // Output: 10
+
+        list.add("IT23011"); 
+        
+        int expectedNewCapacity = iCapacity + (iCapacity >> 1); // equivalent to 10 + (10/2) = 15
+        
+        System.out.println("\nAfter adding 11th element (resize triggered):");
+        System.out.println("New Size: " + list.size()); // Output: 11
+                System.out.println("N Capacity (Simulated): " + expectedNewCapacity); 
+        System.out.println("Capacity Increase: 50% (from 10 to 15)");
+    }
+}
